@@ -16,7 +16,7 @@ angular
     'ngResource',
     'ngRoute',
     'ngSanitize',
-    'ngTouch'
+    'ngTouch',
   ])
   .config(function ($routeProvider) {
     $routeProvider
@@ -37,6 +37,11 @@ angular
       })
       .when('/homeAdmin', {
         templateUrl: 'views/homeAdmin.html',
+        controller: 'homeCtrl',
+        controllerAs: 'ctrl'
+      })
+      .when('/home', {
+        templateUrl: 'views/home.html',
         controller: 'homeCtrl',
         controllerAs: 'ctrl'
       })
@@ -93,6 +98,11 @@ angular
       .when('/perfil', {
         templateUrl: 'views/perfil.html',
         controller: 'perfilCtrl',
+        controllerAs: 'ctrl'
+      })
+      .when('/users', {
+        templateUrl: 'views/users.html',
+        controller: 'UsersCtrl',
         controllerAs: 'ctrl'
       })
       .otherwise({

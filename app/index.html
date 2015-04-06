@@ -20,10 +20,12 @@
 <div class="header">
   <div class="navbar navbar-default" role="navigation">
     <div class="container">
+      <div><h2 class="navbar-text">ENEJ 15</h2></div>
       <div class="navbar-header" ng-if="currentUser.admin && currentUser.data">
         <ul class="nav navbar-nav">
           <li><a href="#/workshopsAdm">Workshops</a></li>
           <li><a href="#/hotelsAdm">Hotéis</a></li>
+          <li><a href="#/users">Usuários</a></li>
           <li><a href="#/perfil">Perfil</a></li>
         </ul>
       </div>
@@ -34,7 +36,7 @@
           <li><a href="#/perfil">Perfil</a></li>
         </ul>
       </div>
-      <div ng-if="currentUser.nomeUsuario">
+      <div ng-if="currentUser.email">
         <a class="navbar-text navbar-right" href="" ng-click="logout()">Logout</a>
 
         <p class="navbar-text navbar-right">Olá, {{currentUser.data.nome}}</p>
@@ -83,6 +85,7 @@
 
 <!-- build:js({.tmp,app}) scripts/scripts.js -->
 <script src="scripts/app.js"></script>
+<script src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>
 <script src="scripts/controllers/login.js"></script>
 <script src="scripts/services/userFactory.js"></script>
 <script src="scripts/controllers/registration.js"></script>
@@ -98,10 +101,11 @@
 <script src="scripts/directives/roomslist.js"></script>
 <script src="scripts/services/authService.js"></script>
 <script src="scripts/services/session.js"></script>
-<script src="scripts/services/user.js"></script>
 <script src="scripts/controllers/home.js"></script>
 <script src="scripts/directives/roomForm.js"></script>
 <script src="scripts/directives/tablecjr.js"></script>
+<script src="scripts/controllers/users.js"></script>
+<script src="scripts/services/modalservice.js"></script>
 <!-- endbuild -->
 </body>
 </html>
